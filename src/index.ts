@@ -2,7 +2,6 @@ import { Probot } from 'probot';
 
 export = (app: Probot) => {
     app.on('pull_request.labeled', async (context) => {
-        // app.log.info(context);
         if (context.payload?.label?.name !== 'dependencies') return;
 
         const { data: projects } = await context.octokit.projects.listForRepo({
@@ -45,9 +44,4 @@ export = (app: Probot) => {
             body: `I've added this PR to the [${project.name}](${project.html_url}) project.`,
         });
     });
-    // For more information on building apps:
-    // https://probot.github.io/docs/
-
-    // To get your app running against GitHub, see:
-    // https://probot.github.io/docs/development/
 };
