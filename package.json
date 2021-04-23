@@ -2,7 +2,7 @@
     "name": "add-project-on-labeled",
     "version": "1.0.0",
     "private": true,
-    "description": "A Probot app",
+    "description": "An app to add PRs to a project automatically",
     "author": "Konstantin <kcvw@icloud.com>",
     "license": "ISC",
     "homepage": "https://github.com/KokosnussDEV/add-project-on-labeled",
