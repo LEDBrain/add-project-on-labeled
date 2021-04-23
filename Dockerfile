@@ -6,4 +6,4 @@ RUN npm cache clean --force
 ENV NODE_ENV="production"
 COPY . .
 EXPOSE 3000
-CMD [ "npm", "start" ]
+ENTRYPOINT [ "npm", "start" ]
