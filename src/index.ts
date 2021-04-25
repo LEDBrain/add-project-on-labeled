@@ -12,9 +12,10 @@ export = (app: Probot) => {
             },
         });
 
-        const project = projects.filter((project) =>
+        const project = projects?.filter((project) =>
             project.name.match(/dependabot|dependencies|deps|dependency/gim)
         )[0];
+        if (!project) return;
 
         const { data: columns } = await context.octokit.projects.listColumns({
             project_id: project.id,
@@ -23,7 +24,8 @@ export = (app: Probot) => {
             },
         });
 
-        const column = columns.filter((col) => col.name.match(/to\s*do/gim))[0];
+        const column = columns?.filter((col) => col.name.match(/to\s*do/gim))[0];
+        if (!column) return;
 
         context.octokit.projects.createCard({
             column_id: column.id,
