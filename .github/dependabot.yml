@@ -1,0 +1,14 @@
+version: 2
+updates:
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "daily"
+    assignees:
+      - "KokosnussDEV"
+    commit-message:
+        prefix: "⬆️"
+        include: "scope"
+    reviewers:
+      - "KokosnussDEV"
+    open-pull-requests-limit: 5
