@@ -3,9 +3,9 @@
     "version": "1.0.0",
     "private": true,
     "description": "An app to add PRs to a project automatically",
-    "author": "Konstantin <kcvw@icloud.com>",
+    "author": "TeamCoffee <contact@teamcoffee.codes>",
     "license": "ISC",
-    "homepage": "https://github.com/KokosnussDEV/add-project-on-labeled",
+    "homepage": "https://github.com/TeamCoffeeCodes/add-project-on-labeled",
     "keywords": [
         "probot",
         "github",
