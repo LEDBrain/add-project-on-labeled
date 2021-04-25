@@ -19,8 +19,10 @@ npm start
 docker build -t add-project-on-labeled .
 
 # 2. Start container
-docker run -e APP_ID=<app-id> -e PRIVATE_KEY=<pem-value> add-project-on-labeled
+docker run -e APP_ID=<app-id> -e PRIVATE_KEY=<pem-value> -e WEBHOOK_SECRET=<webhook-secret> add-project-on-labeled
 ```
+
+I suggest mounting the `.pem` file (using absolute paths) and then setting the `PRIVATE_KEY_PATH` env to prevent any errors regarding newlines in the private key.
 
 ## Contributing
 
