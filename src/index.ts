@@ -15,7 +15,8 @@ export = (app: Probot) => {
         const project = projects?.filter((project) =>
             project.name.match(/dependabot|dependencies|deps|dependency/gim)
         )[0];
-        if (!project) return;
+        if (!project || !project?.id)
+            return app.log.warn(`I couldn't find a matching project.${!projects || !projects.map(pro => pro.name) ? '' : ` I found these projects: ${[...projects.map(pro => pro.name)].join(', ')}`}`);
 
         const { data: columns } = await context.octokit.projects.listColumns({
             project_id: project.id,
@@ -24,8 +25,9 @@ export = (app: Probot) => {
             },
         });
 
-        const column = columns?.filter((col) => col.name.match(/to\s*do/gim))[0];
-        if (!column) return;
+        const column = columns?.filter((col) => col.name.match(/to\s*do|open/gim))[0];
+        if (!column || !column?.id)
+            return app.log.warn(`I couldn't find a matching column in the project (id: ${project.id}). ${!columns || !columns.map(col => col.name) ? '' : `I found these columns: ${[...columns.map(col => col.name)].join(', ')}`}`);
 
         context.octokit.projects.createCard({
             column_id: column.id,
