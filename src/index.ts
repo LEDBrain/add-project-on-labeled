@@ -1,6 +1,6 @@
 import { Probot } from 'probot';
 
-export = (app: Probot) => {
+export = (app: Probot): void => {
     app.on('pull_request.labeled', async context => {
         if (context.payload?.label?.name !== 'dependencies') return;
 
