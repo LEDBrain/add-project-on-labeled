@@ -12,7 +12,7 @@
         "probot-app"
     ],
     "scripts": {
-        "build": "tsc",
+        "build": "npx tsc",
         "dev": "npm run build && probot run ./lib/index.js",
         "start": "probot run ./lib/index.js",
         "test": "jest",
