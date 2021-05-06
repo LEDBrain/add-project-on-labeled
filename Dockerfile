@@ -7,4 +7,4 @@ RUN npm run build
 ENV NODE_ENV="production"
 COPY . .
 EXPOSE 3000
-CMD [ "npm", "start" ]
+ENTRYPOINT [ "npm", "start" ]
