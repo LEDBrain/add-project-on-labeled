@@ -10,7 +10,7 @@ updates:
         prefix: "⬆️"
         include: "scope"
     reviewers:
-      - "KokosnussDEV"
+      - "kdev"
     open-pull-requests-limit: 5
     target-branch: "dev"
   
@@ -24,5 +24,5 @@ updates:
         prefix: "⬆️"
         include: "scope"
     reviewers:
-      - "KokosnussDEV"
+      - "kdev"
     target-branch: "dev"
