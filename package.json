@@ -20,18 +20,18 @@
         "lint-and-fix": "eslint . --ext .ts  --fix"
     },
     "dependencies": {
-        "probot": "^11.3.2"
+        "probot": "^11.4.0"
     },
     "devDependencies": {
         "@types/jest": "^26.0.23",
         "@types/node": "^15.6.1",
-        "@typescript-eslint/parser": "^4.25.0",
-        "@typescript-eslint/eslint-plugin": "^4.25.0",
+        "@typescript-eslint/parser": "^4.26.0",
+        "@typescript-eslint/eslint-plugin": "^4.26.0",
         "eslint": "^7.27.0",
         "eslint-plugin-jest": "^24.3.6",
         "eslint-plugin-prettier": "^3.4.0",
         "jest": "^27.0.3",
-        "nock": "^13.0.5",
+        "nock": "^13.1.0",
         "prettier": "^2.3.0",
         "smee-client": "^1.2.2",
         "ts-jest": "^27.0.2",
