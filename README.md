@@ -8,10 +8,10 @@
 
 ```sh
 # 1. Pull the image (you can also build the image yourself, see down below for more information)
-docker pull teamcoffee/add-project-on-labeled
+docker pull ledbrain/add-project-on-labeled
 
 # 2. Start the container
-docker run -e APP_ID=<app-id> -e PRIVATE_KEY=<pem-value> -e WEBHOOK_SECRET=<webhook-secret> teamcoffee/add-project-on-labeled
+docker run -e APP_ID=<app-id> -e PRIVATE_KEY=<pem-value> -e WEBHOOK_SECRET=<webhook-secret> ledbrain/add-project-on-labeled
 ```
 I suggest mounting the `.pem` file (using absolute paths) and then setting the `PRIVATE_KEY_PATH` env to prevent any errors regarding newlines in the private key.
 
@@ -19,7 +19,7 @@ I suggest mounting the `.pem` file (using absolute paths) and then setting the `
 
 ```sh
 # Clone the repository
-git clone https://github.com/TeamCoffeeCodes/add-project-on-labeled.git
+git clone https://github.com/ledbrain/add-project-on-labeled.git
 
 # cd into the directory
 cd add-project-on-labeled
@@ -50,4 +50,4 @@ For more, check out the [Contributing Guide](CONTRIBUTING.md).
 
 ## License
 
-[ISC](LICENSE) © 2021 TeamCoffee <contact@teamcoffee.codes>
+[ISC](LICENSE) © 2021 LEDBrain <opensource@ledbrain.de>
