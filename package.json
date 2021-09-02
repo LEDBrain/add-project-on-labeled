@@ -20,7 +20,7 @@
         "lint-and-fix": "eslint . --ext .ts  --fix"
     },
     "dependencies": {
-        "probot": "^12.1.0"
+        "probot": "^12.1.1"
     },
     "devDependencies": {
         "@types/jest": "^27.0.1",
