@@ -7,7 +7,7 @@ updates:
     assignees:
       - "kdev"
     commit-message:
-        prefix: "⬆️"
+        prefix: "⬆️npm"
         include: "scope"
     reviewers:
       - "kdev"
@@ -21,20 +21,21 @@ updates:
     assignees:
       - "kdev"
     commit-message:
-        prefix: "⬆️"
+        prefix: "⬆️ gh-actions"
         include: "scope"
     reviewers:
       - "kdev"
     target-branch: "dev"
 
-    - package-ecosystem: 'docker'
-      directory: '/'
-      schedule:
-          interval: 'daily'
-      assignees:
-          - 'kdev'
-      commit-message:
-          prefix: '⬆️ docker'
-          include: 'scope'
-      reviewers:
-          - 'kdev'
+  - package-ecosystem: "docker"
+    directory: "/"
+    schedule:
+      interval: "daily"
+    assignees:
+      - "kdev"
+    commit-message:
+        prefix: "⬆️ docker"
+        include: "scope"
+    reviewers:
+      - "kdev"
+    target-branch: "dev"
