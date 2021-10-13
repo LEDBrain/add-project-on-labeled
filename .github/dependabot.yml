@@ -26,3 +26,15 @@ updates:
     reviewers:
       - "kdev"
     target-branch: "dev"
+
+    - package-ecosystem: 'docker'
+      directory: '/'
+      schedule:
+          interval: 'daily'
+      assignees:
+          - 'kdev'
+      commit-message:
+          prefix: '⬆️ docker'
+          include: 'scope'
+      reviewers:
+          - 'kdev'
