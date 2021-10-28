@@ -1,4 +1,4 @@
-FROM node:15-slim
+FROM node:17-slim
 WORKDIR /usr/src/app
 COPY package.json package-lock.json ./
 RUN npm ci --production
